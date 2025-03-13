@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Geocities Page</title>
+    <style>
+        /* Geocities-Style CSS */
+
+/* Background with a retro tiled effect */
+body {
+    background: url('images/clouds.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #00ff00;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+/* Marquee with Grass Background */
+header {
+    font-size: 40px;
+    font-weight: bold;
+    color: yellow;
+    background-color: #228B22; /* Forest Green */
+    background-image: url('images/grass.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+/* Glowing Text Effect */
+h1, .glow-text {
+    text-shadow: 2px 2px 10px yellow;
+}
+
+
+/* Container with Retro Borders */
+.container {
+    width: 80%;
+    margin: auto;
+    border: 10px solid;
+    border-image: repeating-linear-gradient(45deg, red, red 10px, white 10px, white 20px) 10;
+    background-color: black;
+    padding: 20px;
+}
+
+/* Retro Visitor Counter */
+.counter {
+    font-size: 20px;
+    background: white;
+    color: black;
+    display: inline-block;
+    padding: 5px;
+    border: 3px solid black;
+}
+
+/* Guestbook Box */
+.guestbook {
+    background-image: url('images/grass.jpg');
+    padding: 10px;
+    margin-top: 20px;
+    color: yellow;
+}
+
+/* Neon Button Effect */
+button {
+    background: black;
+    color: cyan;
+    font-size: 18px;
+    border: 3px solid cyan;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px cyan;
+    box-shadow: 0px 0px 10px cyan;
+}
+button:hover {
+    background: cyan;
+    color: black;
+}
+
+.link {
+    color: red;
+}
+    </style>
+</head>
+<body>
+    <header> ⚾ COLLEEN'S BASEBALL PAGE ⚾ </header>
+    <div class="container">
+        <h1 class="blink">BASEBALL BASEBALL BASEBALL</h1>
+        <p> MY LOVE OF BASEBALL COMES FROM THE NOSTALGIA OF GOING TO BRAVES GAMES IN THE SUMMER OF THE 2000'S</p>
+        <img src="images/baseball1.jpeg" alt="Baseball Field" width="400">
+        <p> I ALSO FIND THERE IS POWER IN BEING QUEER AND RECLAIMING AMERICAN CULTURE... LIKE BASEBALL, PEANUTS, OR <P class="link"> MY LOVE OF JIMMY CARTER</P> </p>
+        <img src="images/baseball7.jpeg" alt="Me at Game" height="320">
+        <img src="images/peanut.jpg" alt="Me at Game" height="320">
+        <img src="images/corn.jpeg" alt="Me at Game" height="280">
+        <img src="images/peanut2.jpg" alt="Me at Game" height="280">
+        <p> OR BEING A COWBOY </p>
+        <img src="images/americancowboy.jpeg" alt="Me at Game" height="400">
+        <p> I ALSO LOVE GOING TO GAMES WITH MY FAMILY! HERE IS ME ON THE LEFT AND MY TWIN AND MARGE ON THE RIGHT</p>
+        <img src="images/baseball2.jpeg" alt="Me at Game" height="300">
+        <img src="images/baseball3.jpeg" alt="Marge and Carrie" height="300">
+        <p> WE WENT TO A BRAVES GAME ON FATHERS DAY 2024 I LOVE MY DAD! </p>
+        <img src="images/baseball4.jpeg" alt="Dad, Me, and Carrie at Game" height="400">
+        <p> I ALSO LOVE BASEBALL MOVIES! THERE IS NOTHING MORE POETIC THAN THE LOVE A PLAYER HAS FOR THE SPORT OF BASEBALL</p>
+        <p> BASEBALL IS A BEACON OF LOVE </p>
+        <p class="link"> LINK TO MY BASEBALL MOVIE LETTERBOX LIST </p>
+        <img src="images/baseball5.jpg" alt="Baseball Movies" width="400">
+        <p> I ALSO LOVE GOING TO METS GAMES WITH MY FRIEND CATIE AND LILY </p>
+        <img src="images/baseball6.jpeg" alt="Me at Game" height="300"> <img src="images/baseball7.jpeg" alt="Me at Game" height="300">
+        <img src="images/baseball8.jpeg" alt="Me at Game" height="300">
+        <img src="images/baseball9.jpeg" alt="Me at Game" height="300">
+        <p> HERE IS MY 24TH BIRTHDAY GIFT FROM MY TWIN, A BRAVES BOBBLE HEAD BUT IT IS ME, BLONDE EYEBROWS </p>
+        <img src="images/bobble.jpg" alt="Leeny Miller Bobble Head" width="400">
+        <p> I REMEMBER WAKING UP EARLY AS A KID TO GET OUTSIDE ON FALL MORNINGS AND PLAY ONE VS ONE BASEBALL IN THE BACK YARD WITH MY TWIN </p>
+        <P>  MAYBE I WANT TO FEEL THIS FEELING AGAIN </p>
+        <p>Visitor Counter: <span class="counter" id="counter">0</span></p>
+    </div>
+    
+    <div class="guestbook">
+        <h2>EMAIL ME IF YOU WANT TO PLAY OR GO TO A GAME!</h2>
+        <form onsubmit="alert('Thanks for signing my guestbook!'); return false;">
+            <input type="text" placeholder="Your Name" required>
+            <input type="submit" value="Sign It!">
+        </form>
+    </div>
+    
+    <script>
+        let count = localStorage.getItem("visitorCount") || 0;
+        count++;
+        localStorage.setItem("visitorCount", count);
+        document.getElementById("counter").textContent = count;
+    </script>
+</body>
+</html>
